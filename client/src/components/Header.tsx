@@ -7,6 +7,7 @@ import { useLogoutMutation } from "@/redux/slices/api";
 import { updateCurrentUser, updateIsLoggedIn } from "@/redux/slices/appSlice";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { updateIsOwner } from "@/redux/slices/compilerSlice";
+import TagIcon from './../assets/html.png'
 
 export default function Header() {
   const [logout, { isLoading }] = useLogoutMutation();
@@ -29,8 +30,9 @@ export default function Header() {
   }
   return (
     <nav className="w-full h-[60px] bg-gray-900 text-white p-3 flex justify-between items-center">
-      <Link to="/">
-        <h2 className="font-bold select-none">WD Compiler</h2>
+      <Link to="/" className = "flex items-center gap-2">
+        <img src = {TagIcon} alt = "Coder Pro" className = "w-10" />
+        <h2 className = "font-bold text-[#ffd168]">Coder Pro</h2>
       </Link>
       <ul className="flex gap-2">
         <li>
@@ -40,7 +42,7 @@ export default function Header() {
         </li>
         <li>
           <Link to="/all-codes">
-            <Button variant="link">All Codes</Button>
+            <Button variant="link">Browse Code</Button>
           </Link>
         </li>
         {isLoggedIn ? (

@@ -50,7 +50,7 @@ export default function Signup() {
       <div className="__form_container bg-black border-[1px] py-8 px-4 flex flex-col gap-5 w-[300px]">
         <div className="">
           <h1 className="font-mono text-4xl font-bold text-left">Signup</h1>
-          <p className=" font-mono text-xs">
+          <p className="font-mono text-xs ">
             Join the community of expert frontend developers🧑‍💻.
           </p>
         </div>
@@ -114,9 +114,9 @@ export default function Signup() {
             </Button>
           </form>
         </Form>
-        <small className="text-xs font-mono">
+        <small className="font-mono text-xs">
           Already have an account?{" "}
-          <Link className=" text-blue-500" to="/login">
+          <Link className="text-blue-500 " to="/login">
             Login
           </Link>
           .

@@ -10,7 +10,7 @@ import {
 export const api = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://coder-pro.onrender.com",
-    credentials: "include",
+    credentials: "same-origin",
   }),
   tagTypes: ["myCodes", "allCodes"],
   endpoints: (builder) => ({
@@ -39,7 +39,7 @@ export const api = createApi({
         url: "/user/login",
         method: "POST",
         body: body,
-        credentials: "include",
+        credentials: "same-origin",
       }),
     }),
     signup: builder.mutation<userInfoType, signupCredentialsType>({

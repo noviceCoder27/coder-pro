@@ -13,7 +13,10 @@ const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cookie_parser_1.default)());
-app.use((0, cors_1.default)({ origin: "https://coder-pro027.netlify.app" }));
+app.use((0, cors_1.default)({ origin: "https://coder-pro027.netlify.app/",
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
+    credentials: true
+}));
 (0, dotenv_1.config)();
 app.use("/compiler", compilerRouter_1.compilerRouter);
 app.use("/user", userRouter_1.userRouter);

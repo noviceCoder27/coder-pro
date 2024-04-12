@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({origin: "https://coder-pro027.netlify.app/",
+app.use(cors({origin: "https://coder-pro027.netlify.app",
     methods: ["GET", "POST", "PATCH", "PUT","DELETE"],
     credentials: true
  }));

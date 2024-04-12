@@ -9,7 +9,7 @@ import {
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://coder-pro.onrender.com",
+    baseUrl: "https://coder-pro.vercel.app", 
     credentials: "same-origin",
   }),
   tagTypes: ["myCodes", "allCodes"],
